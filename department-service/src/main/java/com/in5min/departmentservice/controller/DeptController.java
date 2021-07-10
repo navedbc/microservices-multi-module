@@ -23,8 +23,8 @@ public class DeptController {
     @GetMapping("/{id}")
     public Dept getDepartmentById(@PathVariable Long id){
         System.out.println("naved khan");
-        log.info("test commint");
-        log.info("on dev branch only");
+        log.info("test commit");
+
         return deptService.getDepartmentById(id);
     }
 
