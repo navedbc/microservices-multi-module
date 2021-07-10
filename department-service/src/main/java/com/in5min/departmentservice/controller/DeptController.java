@@ -19,6 +19,8 @@ public class DeptController {
 
     @Autowired
     DeptService deptService;
+    
+    private String name;
 
     @GetMapping("/{id}")
     public Dept getDepartmentById(@PathVariable Long id){
