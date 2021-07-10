@@ -4,6 +4,7 @@ import com.in5min.departmentservice.model.Dept;
 import com.in5min.departmentservice.service.DeptService;
 import com.in5min.departmentservice.vo.DeptUserVO;
 import lombok.experimental.PackagePrivate;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/dept")
 @EnableEurekaClient
+@Slf4j
 public class DeptController {
 
     @Autowired
@@ -20,6 +22,8 @@ public class DeptController {
 
     @GetMapping("/{id}")
     public Dept getDepartmentById(@PathVariable Long id){
+        System.out.println("naved khan");
+        log.info("test commint");
         return deptService.getDepartmentById(id);
     }
 
