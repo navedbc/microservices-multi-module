@@ -22,7 +22,6 @@ public class DeptController {
 
     @GetMapping("/{id}")
     public Dept getDepartmentById(@PathVariable Long id){
-        log.info("test commit");
         return deptService.getDepartmentById(id);
     }
 
