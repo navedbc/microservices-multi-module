@@ -24,6 +24,7 @@ public class DeptController {
     public Dept getDepartmentById(@PathVariable Long id){
         System.out.println("naved khan");
         log.info("test commint");
+        log.info("on dev branch only");
         return deptService.getDepartmentById(id);
     }
 
